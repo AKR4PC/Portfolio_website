@@ -19,7 +19,7 @@ export function ArticleCard({ article }: { article: Article }) {
   );
 
   if (article.href) {
-    return <a className="article-card" href={article.href} data-cursor="READ">{content}</a>;
+    return <a className="article-card" href={article.href} target="_blank" rel="noreferrer" data-cursor="READ">{content}</a>;
   }
   return <article className="article-card is-draft" tabIndex={0} aria-label={`${article.title} — link coming soon`} data-cursor="READ">{content}</article>;
 }

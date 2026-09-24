@@ -8,6 +8,7 @@ export const profile = {
   links: {
     linkedin: "https://www.linkedin.com/in/zob07",
     github: "https://github.com/AKR4PC",
+    x: "https://x.com/zobo_07",
   },
   education: {
     school: "Delhi Skill & Entrepreneurship University",

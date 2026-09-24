@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, ArrowUpRight } from "lucide-react";
 import { MenuOverlay } from "@/components/navigation/MenuOverlay";
+import { profile } from "@/data/profile";
 import { scrollToId } from "@/lib/utils";
 
 export function FloatingNav() {
@@ -60,15 +61,17 @@ export function FloatingNav() {
         <button className="nav-wordmark" type="button" onClick={() => closeAndGo("home")} data-cursor="TOP">
           AKSHAT
         </button>
-        <button
+        <a
           className="nav-contact"
-          type="button"
-          onClick={() => closeAndGo("contact")}
+          href={profile.links.linkedin}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => setOpen(false)}
           data-cursor="TALK"
         >
           <span>LET&apos;S TALK</span>
           <ArrowUpRight size={15} strokeWidth={1.5} />
-        </button>
+        </a>
       </header>
       <MenuOverlay open={open} onClose={() => setOpen(false)} onNavigate={closeAndGo} />
     </>

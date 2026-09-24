@@ -7,7 +7,11 @@ import type { Project } from "@/data/projects";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card" data-cursor="OPEN">
-      <a href={project.href ?? "#contact"} className="project-card-link">
+      <a
+        href={project.href ?? "#contact"}
+        className="project-card-link"
+        {...(project.href && !project.href.startsWith("#") ? { target: "_blank", rel: "noreferrer" } : {})}
+      >
         <div className="project-card-image">
           <Image src={project.image} alt={`${project.name} editorial visual`} fill sizes="(max-width: 800px) 92vw, 50vw" />
           <span className="project-image-index">{project.number} / 03</span>

@@ -20,7 +20,7 @@ export const projects: Project[] = [
     image: "/images/projects/empireui.png",
     tech: ["TypeScript", "React", "Next.js", "Three.js", "Tailwind CSS"],
     highlights: ["40+ components", "AI-ready primitives", "WebGL interactions"],
-    href: "#contact",
+    href: "https://empireui.com",
   },
   {
     number: "02",
@@ -42,6 +42,6 @@ export const projects: Project[] = [
     image: "/images/projects/article.jpg",
     tech: ["AI", "Vector Search", "Qdrant", "Advanced Filtering"],
     highlights: ["Technical deep-dive", "AI property search", "Qdrant"],
-    href: "#contact",
+    href: "https://pub.towardsai.net/why-vector-search-alone-isnt-enough-building-ai-property-search-with-advanced-filtering-1e60ae82b259",
   },
 ];

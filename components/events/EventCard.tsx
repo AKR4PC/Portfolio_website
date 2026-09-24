@@ -54,7 +54,12 @@ export function EventCard({ event, index }: { event: PortfolioEvent; index: numb
 
   return (
     <article className={`event-card event-card-${index + 1}`} data-cursor="VIEW">
-      <a href={event.href ?? "#contact"} className="event-card-link" onClick={(clickEvent) => { if (!event.href) { clickEvent.preventDefault(); scrollToId("contact"); } }}>
+      <a
+        href={event.href ?? "#contact"}
+        className="event-card-link"
+        onClick={(clickEvent) => { if (!event.href) { clickEvent.preventDefault(); scrollToId("contact"); } }}
+        {...(event.href && !event.href.startsWith("#") ? { target: "_blank", rel: "noreferrer" } : {})}
+      >
         {visual}
         {details}
       </a>
