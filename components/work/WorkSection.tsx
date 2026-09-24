@@ -122,7 +122,8 @@ export function WorkSection() {
         if (reducedMotionQuery.matches) currentProgress = targetProgress;
         else currentProgress += (targetProgress - currentProgress) * 0.12;
 
-        const isVisible = currentProgress > 0.0005 && currentProgress < 0.995;
+        const reachedStage = window.scrollY >= stageDocumentTop - 2;
+        const isVisible = reachedStage && currentProgress < 0.995;
         stageElement.style.opacity = isVisible ? "1" : "0";
         stageElement.style.visibility = isVisible ? "visible" : "hidden";
         stageElement.style.pointerEvents = isVisible ? "auto" : "none";
