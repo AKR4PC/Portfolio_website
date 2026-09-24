@@ -61,7 +61,7 @@ export const events: PortfolioEvent[] = [
     description:
       "A hackathon in the Tech Capital of India, bringing 2,000+ participants and 400+ teams together. Collaborated with Vapi, MiniMax, Trae and other ecosystem partners.",
     audience: "2,000+ participants · 400+ teams",
-    image: "/images/events/hackblr.HEIC",
+    image: "/images/events/hackblr.jpg",
     category: "Community hackathon",
     href: "https://luma.com/ia0ik7c6",
   },
