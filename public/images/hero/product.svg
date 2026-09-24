@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+<rect width="1000" height="800" fill="#161616"/><g fill="none" stroke="#686862" stroke-width="2"><rect x="90" y="100" width="820" height="600" rx="34"/><path d="M90 240h820M90 560h820M360 100v140M360 560v140M690 100v140M690 560v140"/></g>
+<g fill="#f2f2ed"><rect x="145" y="155" width="150" height="32" rx="16"/><rect x="415" y="155" width="220" height="32" rx="16" opacity=".7"/><rect x="145" y="310" width="470" height="19" rx="9" opacity=".45"/><rect x="145" y="355" width="350" height="19" rx="9" opacity=".25"/><rect x="145" y="430" width="210" height="58" rx="29"/><rect x="385" y="430" width="210" height="58" rx="29" opacity=".45"/></g>
+<g fill="none" stroke="#f2f2ed" stroke-width="4"><path d="M160 670 300 610l110 35 130-100 110 60 140-130"/></g><g fill="#f2f2ed"><circle cx="300" cy="610" r="9"/><circle cx="410" cy="645" r="9"/><circle cx="540" cy="545" r="9"/><circle cx="650" cy="605" r="9"/><circle cx="790" cy="475" r="9"/></g>
+<text x="125" y="72" fill="#8d8d87" font-family="Arial" font-size="18" letter-spacing="4">PRODUCT / 003</text><text x="700" y="730" fill="#f2f2ed" font-family="Arial" font-size="18" letter-spacing="3">MAKE IT USEFUL</text>
+</svg>

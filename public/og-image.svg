@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#050505"/>
+  <circle cx="930" cy="150" r="280" fill="none" stroke="#242424" stroke-width="2"/>
+  <circle cx="930" cy="150" r="190" fill="none" stroke="#242424" stroke-width="2"/>
+  <text x="72" y="102" fill="#8a8a84" font-family="Arial" font-size="16" letter-spacing="5">AKSHAT KUMAR / 2026</text>
+  <text x="72" y="260" fill="#f7f7f5" font-family="Arial" font-size="76" font-weight="800" letter-spacing="-4">BUILD PRODUCTS.</text>
+  <text x="72" y="345" fill="#f7f7f5" font-family="Arial" font-size="76" font-weight="800" letter-spacing="-4">COMMUNITIES.</text>
+  <text x="72" y="430" fill="#777771" font-family="Arial" font-size="76" font-weight="800" letter-spacing="-4">MOMENTS.</text>
+  <text x="72" y="548" fill="#8a8a84" font-family="Arial" font-size="16" letter-spacing="4">DEVELOPER · DEVREL · COMMUNITY BUILDER</text>
+</svg>

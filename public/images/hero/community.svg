@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+<rect width="1000" height="800" fill="#bdbdb6"/><path d="M0 0h1000v800H0z" fill="#242424"/>
+<g fill="#eeeee8"><circle cx="150" cy="260" r="48"/><circle cx="330" cy="190" r="48"/><circle cx="520" cy="275" r="48"/><circle cx="730" cy="175" r="48"/><circle cx="860" cy="330" r="48"/><circle cx="220" cy="520" r="48"/><circle cx="460" cy="530" r="48"/><circle cx="700" cy="540" r="48"/></g>
+<g fill="none" stroke="#f4f4ef" stroke-width="4" opacity=".72"><path d="M150 260 330 190 520 275 730 175 860 330M150 260 220 520 460 530 700 540 860 330M330 190 460 530M520 275 700 540"/></g>
+<g fill="#8b8b85"><circle cx="150" cy="260" r="9"/><circle cx="330" cy="190" r="9"/><circle cx="520" cy="275" r="9"/><circle cx="730" cy="175" r="9"/><circle cx="860" cy="330" r="9"/><circle cx="220" cy="520" r="9"/><circle cx="460" cy="530" r="9"/><circle cx="700" cy="540" r="9"/></g>
+<text x="68" y="92" fill="#f4f4ef" font-family="Arial" font-size="18" letter-spacing="4">THE ROOM IS THE PRODUCT</text><text x="68" y="700" fill="#aaa" font-family="Arial" font-size="18" letter-spacing="3">PEOPLE / 01—08</text>
+</svg>

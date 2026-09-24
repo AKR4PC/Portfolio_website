@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+<rect width="1000" height="800" fill="#ecece7"/><g stroke="#c4c4bd" stroke-width="1"><path d="M0 100h1000M0 200h1000M0 300h1000M0 400h1000M0 500h1000M0 600h1000M0 700h1000"/><path d="M100 0v800M200 0v800M300 0v800M400 0v800M500 0v800M600 0v800M700 0v800M800 0v800M900 0v800"/></g>
+<g fill="#111"><rect x="125" y="125" width="750" height="550" rx="28"/><rect x="185" y="190" width="270" height="14" rx="7"/><rect x="185" y="235" width="410" height="14" rx="7" opacity=".55"/><rect x="185" y="280" width="350" height="14" rx="7" opacity=".3"/><rect x="185" y="360" width="170" height="14" rx="7"/><rect x="185" y="405" width="270" height="14" rx="7" opacity=".55"/><rect x="185" y="450" width="225" height="14" rx="7" opacity=".3"/><circle cx="700" cy="510" r="86" fill="none" stroke="#ecece7" stroke-width="6"/><path d="m730 540 58 58" stroke="#ecece7" stroke-width="10"/></g>
+<text x="72" y="84" fill="#555" font-family="Arial" font-size="18" letter-spacing="4">OPEN / SOURCE</text><text x="72" y="740" fill="#111" font-family="Arial" font-size="18" letter-spacing="3">READ / WRITE / SHARE</text>
+</svg>

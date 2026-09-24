@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+<rect width="1000" height="800" fill="#d8d8d2"/><rect x="42" y="42" width="916" height="716" rx="28" fill="#efefeb" stroke="#a2a29b" stroke-width="2"/>
+<g fill="none" stroke="#222" stroke-width="2" opacity=".22"><circle cx="500" cy="400" r="260"/><circle cx="500" cy="400" r="190"/><circle cx="500" cy="400" r="110"/></g>
+<g fill="#111"><circle cx="500" cy="140" r="18"/><circle cx="725" cy="275" r="18"/><circle cx="725" cy="525" r="18"/><circle cx="500" cy="660" r="18"/><circle cx="275" cy="525" r="18"/><circle cx="275" cy="275" r="18"/></g>
+<g stroke="#111" stroke-width="4"><path d="M500 140 725 275 725 525 500 660 275 525 275 275Z"/><path d="M500 140 500 660M275 275 725 525M725 275 275 525" opacity=".35"/></g>
+<text x="78" y="105" fill="#111" font-family="Arial" font-size="18" letter-spacing="4">MODEL / CONTEXT / ACTION</text><text x="78" y="700" fill="#555" font-family="Arial" font-size="18" letter-spacing="3">A HUMAN LOOP</text>
+</svg>

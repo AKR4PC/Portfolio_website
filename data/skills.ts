@@ -1,0 +1,101 @@
+export type SkillCategory = {
+  id: string;
+  index: string;
+  name: string;
+  shortName: string;
+  description: string;
+  skills: string[];
+};
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: "engineering",
+    index: "01",
+    name: "Engineering",
+    shortName: "ENG",
+    description: "The systems underneath the story.",
+    skills: [
+      "Python",
+      "C++",
+      "R",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Firebase",
+      "MongoDB",
+      "PostgreSQL",
+      "Prisma",
+      "Shadcn/UI",
+      "Full Stack Development",
+      "REST APIs",
+      "System Design",
+      "OOP",
+      "DSA",
+    ],
+  },
+  {
+    id: "ai",
+    index: "02",
+    name: "AI / ML",
+    shortName: "AI",
+    description: "Models made legible and useful.",
+    skills: [
+      "TensorFlow",
+      "PyTorch",
+      "Qiskit",
+      "OpenCV",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vision",
+      "LLM APIs",
+    ],
+  },
+  {
+    id: "devrel",
+    index: "03",
+    name: "Developer relations",
+    shortName: "DEVREL",
+    description: "Turning products into shared language.",
+    skills: [
+      "Developer Relations",
+      "Technical Speaking",
+      "Developer Workshops",
+      "Community Building",
+      "Hackathon Organization",
+      "Developer Advocacy",
+      "Technical Content",
+      "Developer Education",
+      "Community Programs",
+      "Event Strategy",
+      "Open Source",
+      "Developer Experience",
+    ],
+  },
+  {
+    id: "growth",
+    index: "04",
+    name: "Growth / Product",
+    shortName: "GROWTH",
+    description: "Making good work find its people.",
+    skills: [
+      "A/B Testing",
+      "Growth Experiments",
+      "Product Strategy",
+      "Go-to-Market",
+      "Sprint Planning",
+      "Engineering Collaboration",
+      "Community Growth",
+      "Developer Adoption",
+    ],
+  },
+];

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+<rect width="1000" height="800" fill="#161616"/><rect x="38" y="38" width="924" height="724" rx="30" fill="#202020" stroke="#565656" stroke-width="2"/>
+<g fill="none" stroke="#a9a9a1" stroke-width="3" opacity=".75"><path d="M80 190h840M80 330h840M80 470h840M80 610h840"/><path d="M180 80v640M360 80v640M540 80v640M720 80v640M900 80v640"/></g>
+<g fill="#f3f3ef"><circle cx="180" cy="190" r="7"/><circle cx="360" cy="330" r="7"/><circle cx="540" cy="470" r="7"/><circle cx="720" cy="610" r="7"/><circle cx="900" cy="190" r="7"/></g>
+<path d="M90 690 260 500l100 75 155-250 110 90 110-190 180 160" fill="none" stroke="#f3f3ef" stroke-width="7"/>
+<circle cx="260" cy="500" r="13" fill="#f3f3ef"/><circle cx="515" cy="325" r="13" fill="#f3f3ef"/><circle cx="625" cy="415" r="13" fill="#f3f3ef"/><circle cx="805" cy="225" r="13" fill="#f3f3ef"/>
+<text x="80" y="115" fill="#a9a9a1" font-family="Arial" font-size="18" letter-spacing="4">SYSTEMS / 001</text><text x="80" y="720" fill="#f3f3ef" font-family="Arial" font-size="20" letter-spacing="3">BUILD / TEST / LEARN</text>
+</svg>
