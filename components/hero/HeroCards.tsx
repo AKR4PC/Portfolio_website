@@ -20,21 +20,46 @@ export function HeroCards() {
 
   useLayoutEffect(() => {
     if (prefersReducedMotion()) return;
+    const container = cardsRef.current;
+    if (!container) return;
+
+    const driftTweens: gsap.core.Tween[] = [];
+
     const context = gsap.context(() => {
-      const drifts = cardsRef.current?.querySelectorAll<HTMLElement>(".hero-card-drift");
+      const drifts = container.querySelectorAll<HTMLElement>(".hero-card-drift");
       drifts?.forEach((drift, index) => {
-        gsap.to(drift, {
-          y: index % 2 === 0 ? -7 : 7,
-          rotation: index % 2 === 0 ? -0.7 : 0.7,
-          duration: 4.6 + index * 0.22,
-          delay: index * 0.14,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
+        driftTweens.push(
+          gsap.to(drift, {
+            y: index % 2 === 0 ? -7 : 7,
+            rotation: index % 2 === 0 ? -0.7 : 0.7,
+            duration: 4.6 + index * 0.22,
+            delay: index * 0.14,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+          }),
+        );
       });
-    }, cardsRef);
-    return () => context.revert();
+    }, container);
+
+    // Pause the idle drift animation when the hero is scrolled off-screen.
+    // These yoyo tweens run continuously — pausing them when invisible frees
+    // up compositor/CPU budget for the sections the user is actually viewing.
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        driftTweens.forEach((tween) => {
+          if (entry.isIntersecting) tween.resume();
+          else tween.pause();
+        });
+      },
+      { threshold: 0.01 },
+    );
+    observer.observe(container);
+
+    return () => {
+      observer.disconnect();
+      context.revert();
+    };
   }, []);
 
   const handleMove = (event: React.PointerEvent<HTMLElement>, index: number) => {

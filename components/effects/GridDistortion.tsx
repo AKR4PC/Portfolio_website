@@ -17,6 +17,7 @@ export function GridDistortion({ className = "" }: { className?: string }) {
     let height = 0;
     let pixelRatio = 1;
     let animationFrame = 0;
+    let isVisible = false;
 
     const resize = () => {
       const bounds = host.getBoundingClientRect();
@@ -79,9 +80,31 @@ export function GridDistortion({ className = "" }: { className?: string }) {
     };
 
     const render = (time: number) => {
+      if (!isVisible) return; // Don't render when off-screen
       draw(time);
       if (!reducedMotion.matches) animationFrame = window.requestAnimationFrame(render);
     };
+
+    const startLoop = () => {
+      if (!reducedMotion.matches && isVisible) {
+        animationFrame = window.requestAnimationFrame(render);
+      }
+    };
+
+    const stopLoop = () => {
+      window.cancelAnimationFrame(animationFrame);
+    };
+
+    // Only run the animation loop when the canvas is visible
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) startLoop();
+        else stopLoop();
+      },
+      { threshold: 0.01 },
+    );
+    observer.observe(host);
 
     const onPointerMove = (event: PointerEvent) => {
       const bounds = host.getBoundingClientRect();
@@ -94,18 +117,18 @@ export function GridDistortion({ className = "" }: { className?: string }) {
       pointer.active = false;
     };
 
-    const observer = new ResizeObserver(resize);
-    observer.observe(host);
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(host);
     window.addEventListener("resize", resize);
     host.addEventListener("pointermove", onPointerMove, { passive: true });
     host.addEventListener("pointerleave", onPointerLeave, { passive: true });
     resize();
     draw(0);
-    if (!reducedMotion.matches) animationFrame = window.requestAnimationFrame(render);
 
     return () => {
-      window.cancelAnimationFrame(animationFrame);
+      stopLoop();
       observer.disconnect();
+      resizeObserver.disconnect();
       window.removeEventListener("resize", resize);
       host.removeEventListener("pointermove", onPointerMove);
       host.removeEventListener("pointerleave", onPointerLeave);

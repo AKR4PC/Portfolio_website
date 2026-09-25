@@ -1,36 +1,48 @@
 "use client";
 
 import { useEffect } from "react";
-import Lenis from "lenis";
 import { gsap, ScrollTrigger } from "@/lib/motion";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-export function SmoothScroll() {
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  (window as any).gsap = gsap;
+  (window as any).ScrollTrigger = ScrollTrigger;
+}
+
+export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
 
-    const lenis = new Lenis({
-      duration: 1.15,
-      smoothWheel: true,
-      syncTouch: false,
-      touchMultiplier: 1.05,
-      autoRaf: false,
+    const smoother = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.15,
+      smoothTouch: 0,
+      effects: false,
+      normalizeScroll: false,
     });
-    window.__portfolioLenis = lenis;
-    document.documentElement.classList.add("lenis-enabled");
-
-    const update = (time: number) => lenis.raf(time * 1000);
-    gsap.ticker.add(update);
-    gsap.ticker.lagSmoothing(0);
-    lenis.on("scroll", ScrollTrigger.update);
+    window.__portfolioSmoother = {
+      scrollTo: (target, options) => {
+        smoother.scrollTo(target, !options?.immediate, `top ${-(options?.offset ?? 0)}px`);
+      },
+      stop: () => smoother.paused(true),
+      start: () => smoother.paused(false),
+    };
+    document.documentElement.classList.add("smooth-enabled");
+    window.dispatchEvent(new CustomEvent("portfolio-smoother-ready"));
 
     return () => {
-      gsap.ticker.remove(update);
-      lenis.destroy();
-      delete window.__portfolioLenis;
-      document.documentElement.classList.remove("lenis-enabled");
+      smoother.kill();
+      delete window.__portfolioSmoother;
+      document.documentElement.classList.remove("smooth-enabled");
     };
   }, []);
 
-  return null;
+  return (
+    <div id="smooth-wrapper">
+      <div id="smooth-content">{children}</div>
+    </div>
+  );
 }

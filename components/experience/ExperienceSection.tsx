@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { ExperienceItem } from "@/components/experience/ExperienceItem";
@@ -10,10 +11,13 @@ import { useIsDesktop } from "@/lib/hooks";
 
 export function ExperienceSection() {
   const [active, setActive] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
   const desktop = useIsDesktop();
   const root = useRef<HTMLElement>(null);
   const preview = useRef<HTMLDivElement>(null);
   const image = useRef<HTMLDivElement>(null);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!desktop || prefersReducedMotion() || !root.current || !preview.current || active === null) return;
@@ -65,14 +69,17 @@ export function ExperienceSection() {
         <span>Hover to open a chapter</span>
         <span>Tap / focus on touch and keyboard</span>
       </div>
-      {desktop ? (
-        <div ref={preview} className="experience-preview" aria-hidden="true">
-          <div ref={image} className="experience-preview-image">
-            {current ? <Image src={current.image} alt="" fill sizes="260px" /> : null}
-            <span>{current?.company}</span>
-          </div>
-        </div>
-      ) : null}
+      {desktop && mounted
+        ? createPortal(
+            <div ref={preview} className="experience-preview" aria-hidden="true">
+              <div ref={image} className="experience-preview-image">
+                {current ? <Image src={current.image} alt="" fill sizes="260px" /> : null}
+                <span>{current?.company}</span>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </section>
   );
 }

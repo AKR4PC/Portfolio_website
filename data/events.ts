@@ -24,6 +24,7 @@ export const events: PortfolioEvent[] = [
     description: "The current Fish Audio event, with full details and registration available through the Luma embed.",
     image: "/images/events/ai-talk.svg",
     category: "Current event",
+    href: "https://lu.ma/evt-JIfsWzQiFvjvU6R",
     embedUrl: "https://luma.com/embed/event/evt-JIfsWzQiFvjvU6R/simple",
   },
   {

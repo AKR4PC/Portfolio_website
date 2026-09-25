@@ -1,6 +1,6 @@
 # Akshat Kumar — Portfolio
 
-Editorial, motion-led personal portfolio for **Akshat Kumar**, built with Next.js App Router, TypeScript, Tailwind CSS, GSAP/ScrollTrigger, Lenis, Three.js and React Three Fiber.
+Editorial, motion-led personal portfolio for **Akshat Kumar**, built with Next.js App Router, TypeScript, Tailwind CSS, GSAP/ScrollTrigger, GSAP ScrollSmoother, Three.js and React Three Fiber.
 
 ## Run locally
 

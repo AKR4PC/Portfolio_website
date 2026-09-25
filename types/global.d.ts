@@ -2,7 +2,7 @@ export {};
 
 declare global {
   interface Window {
-    __portfolioLenis?: {
+    __portfolioSmoother?: {
       scrollTo: (
         target: HTMLElement | string,
         options?: { offset?: number; duration?: number; immediate?: boolean },

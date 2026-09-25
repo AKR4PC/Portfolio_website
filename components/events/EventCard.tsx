@@ -7,7 +7,7 @@ import { scrollToId } from "@/lib/utils";
 
 export function EventCard({ event, index }: { event: PortfolioEvent; index: number }) {
   const visual = event.embedUrl ? (
-    <div className="event-embed-wrap">
+    <div className="event-embed-wrap" data-cursor="hidden">
       <iframe
         src={event.embedUrl}
         title={`${event.title} event embed`}
@@ -43,7 +43,7 @@ export function EventCard({ event, index }: { event: PortfolioEvent; index: numb
 
   if (event.embedUrl) {
     return (
-      <article className={`event-card event-card-${index + 1} event-card-embed`} data-cursor="VIEW">
+      <article className={`event-card event-card-${index + 1} event-card-embed`}>
         <div className="event-card-link event-card-link-embed">
           {visual}
           {details}
